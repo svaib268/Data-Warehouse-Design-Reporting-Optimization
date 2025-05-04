@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: fact_reporting_analytics
+    description: "Sales analytics fact table aggregating invoice data by employee and invoice date with popular genre and album insights"
+    columns:
+      - name: employee_id
+        description: "ID of the employee who supported the customer"
+        tests:
+          - not_null
+
+      - name: generated_date
+        description: "Invoice generation date"
+
+      - name: customer_count
+        description: "Number of distinct customers handled by the employee"
+
+      - name: total_revenue
+        description: "Total sales made by the employee on the invoice date"
+
+      - name: popular_genre
+        description: "Most common genre purchased by the customers"
+
+      - name: popular_album
+        description: "Most common album purchased by the customers"
+
+      - name: report_type
+        description: "Report category label, currently fixed as 'Sales Report'"
+
+      - name: access_count
+        description: "Dummy field for tracking report access counts (currently placeholder)"

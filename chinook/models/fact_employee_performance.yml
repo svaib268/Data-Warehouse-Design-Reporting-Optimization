@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: fact_employee_performance
+    description: "Performance metrics for employees based on customer invoices and retention"
+    columns:
+      - name: employeeid
+        description: "Unique ID of the employee"
+        tests:
+          - not_null
+
+      - name: customer_count
+        description: "Total number of distinct customers handled by the employee"
+
+      - name: total_revenue
+        description: "Sum of all invoice totals associated with the employee's customers"
+
+      - name: avg_customer_value
+        description: "Average revenue per customer"
+
+      - name: avg_invoice_count
+        description: "Average number of invoices per customer"
+
+      - name: retained_customers
+        description: "Number of customers with more than one invoice (indicative of retention)"
+
+      - name: new_customers
+        description: "Number of customers with only one invoice (indicative of new acquisition)"
+
+      - name: performance_score
+        description: "Manually input or computed performance score placeholder"
