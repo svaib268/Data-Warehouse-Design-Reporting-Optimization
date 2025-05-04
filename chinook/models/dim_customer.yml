@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: email
+        tests: [not_null]
