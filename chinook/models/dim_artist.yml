@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_artist
+    description: "Dimension table for artists"
+    columns:
+      - name: artist_id
+        description: "Unique ID for artist"
+        tests: [not_null, unique]
+      - name: name
+        description: "Name of the artist"

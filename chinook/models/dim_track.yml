@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_track
+    description: "Dimension table for tracks"
+    columns:
+      - name: track_id
+        description: "Unique identifier for the track"
+        tests: [not_null, unique]
+      - name: track_name
+        description: "Name of the track"
+      - name: album_id
+        description: "Associated album ID"
+        tests: [not_null]
+      - name: media_type_id
+        description: "Associated media type"
+        tests: [not_null]
+      - name: genre_id
+        description: "Associated genre"
+        tests: [not_null]
+      - name: composer
+        description: "Composer of the track"
+      - name: milliseconds
+        description: "Duration of the track in milliseconds"
+      - name: bytes
+        description: "File size in bytes"
+      - name: unitprice
+        description: "Price per unit"

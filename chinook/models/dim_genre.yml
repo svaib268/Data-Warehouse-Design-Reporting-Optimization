@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_genre
+    description: "Dimension table for music genres"
+    columns:
+      - name: genre_id
+        tests: [not_null, unique]
+      - name: genre_name

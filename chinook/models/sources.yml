@@ -1,0 +1,62 @@
+version: 2
+
+sources:
+  - name: raw
+    database: CHINOOK_DW
+    schema: RAW
+    tables:
+      - name: staging_album
+        description: "Album data from raw source"
+        columns:
+          - name: AlbumId
+            tests: [not_null, unique]
+      - name: staging_artist
+        description: "Artist data"
+        columns:
+          - name: ArtistId
+            tests: [not_null, unique]
+      - name: staging_track
+        description: "Track data"
+        columns:
+          - name: TrackId
+            tests: [not_null, unique]
+      - name: staging_customer
+        description: "Customer data"
+        columns:
+          - name: CustomerId
+            tests: [not_null, unique]
+      - name: staging_employee
+        description: "Employee data"
+        columns:
+          - name: EmployeeId
+            tests: [not_null, unique]
+      - name: staging_invoice
+        description: "Invoice data"
+        columns:
+          - name: InvoiceId
+            tests: [not_null, unique]
+      - name: staging_invoiceline
+        description: "Invoice line data"
+        columns:
+          - name: InvoiceLineId
+            tests: [not_null, unique]
+      - name: staging_genre
+        description: "Genre data"
+        columns:
+          - name: GenreId
+            tests: [not_null, unique]
+      - name: staging_mediatype
+        description: "Media type data"
+        columns:
+          - name: MediaTypeId
+            tests: [not_null, unique]
+      - name: staging_playlist
+        description: "Playlist data"
+        columns:
+          - name: PlaylistId
+            tests: [not_null, unique]
+      - name: staging_playlisttrack
+        description: "Playlist-track mapping data"
+        columns:
+          - name: PlaylistId
+          - name: TrackId

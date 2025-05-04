@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  
+
+  - name: dim_invoice
+    description: "Dimension table for invoices"
+    columns:
+      - name: invoice_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests: [not_null]

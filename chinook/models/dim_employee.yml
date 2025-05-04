@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_employee
+    description: "Dimension table for employees"
+    columns:
+      - name: employee_id
+        tests: [not_null, unique]
+      - name: email
+        tests: [not_null]

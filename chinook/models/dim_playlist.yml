@@ -1,0 +1,9 @@
+version: 2
+
+models: 
+  - name: dim_playlist
+    description: "Dimension table for playlists"
+    columns:
+      - name: playlist_id
+        tests: [not_null, unique]
+      - name: playlist_name
